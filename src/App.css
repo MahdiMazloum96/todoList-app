@@ -1,0 +1,80 @@
+.mainHolder {
+  background: rgb(34, 193, 195);
+  background: linear-gradient(
+    0deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(253, 187, 45, 1) 100%
+  );
+
+  height: 100vh;
+}
+.Header {
+  margin: Auto;
+  text-align: center;
+  padding: 3em;
+  font-size: 2rem;
+}
+.form-todo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-todo {
+  width: 40rem;
+  height: 2rem;
+  border-radius: 0.3rem;
+  border: 1 solid gray;
+  margin: 5px;
+  vertical-align: middle;
+  background-color: rgb(175, 232, 233);
+  font-size: 20px;
+}
+input.input-todo::placeholder {
+  font: 20px Arial, sans-serif;
+  text-align: center;
+}
+
+.add-todo {
+  height: 2.1rem;
+  width: 5rem;
+  font-size: 20px;
+  color: black;
+  border: 1 solid gray;
+  background-color: rgb(244, 248, 7);
+  border-radius: 0.3rem;
+}
+.add-todo:hover {
+  background: rgb(134, 121, 48);
+  background: radial-gradient(
+    circle,
+    rgba(134, 121, 48, 1) 49%,
+    rgba(149, 110, 26, 0.28335084033613445) 70%
+  );
+
+  color: white;
+}
+
+.todo-holder {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid rgba(255, 255, 255, 0.879);
+  width: 60 rem;
+  height: 3rem;
+  margin: 2rem 10rem;
+  border-radius: 0.3rem;
+  padding: 8px;
+  gap: 10px;
+  background: rgb(34, 193, 195);
+  background: linear-gradient(
+    0deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(253, 187, 45, 0.31976540616246496) 100%
+  );
+  color: rgb(33, 37, 21);
+}
+.todo-completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
