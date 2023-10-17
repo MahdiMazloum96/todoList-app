@@ -45,7 +45,7 @@ function App() {
   const taskEditHandler = (task, id) => {
     setTodos(
       todos.map((todo) =>
-        todo.id === id ? { ...todo, isEditing: !todo.isEditing } : todo
+        todo.id === id ? { ...todo, task, isEditing: !todo.isEditing } : todo
       )
     );
   };

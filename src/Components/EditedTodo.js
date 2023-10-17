@@ -6,7 +6,6 @@ function EditedTodo({ task, taskEditHandler }) {
   function submitHandler(e) {
     e.preventDefault();
     taskEditHandler(editValue, task.id);
-    console.log("fuck");
   }
   useEffect(function () {
     elRef.current.focus();
