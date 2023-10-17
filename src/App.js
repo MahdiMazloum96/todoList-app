@@ -1,24 +1,13 @@
-import { useEffect, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import "./App.css";
 import Form from "./Components/Form";
 import Todo from "./Components/Todo";
 import EditedTodo from "./Components/EditedTodo";
+import UseLocalStorage from "./Components/UseLocalStorage";
 
 function App() {
-  const [todos, setTodos] = useState(function () {
-    const localValue = JSON.parse(localStorage.getItem("todosItem"));
-    if (localValue) {
-      return localValue;
-    } else return [];
-  });
+  const [todos, setTodos] = UseLocalStorage("myKey");
 
-  useEffect(
-    function () {
-      localStorage.setItem("todosItem", JSON.stringify(todos));
-    },
-    [todos]
-  );
   const addToDo = (todo) => {
     setTodos([
       ...todos,
